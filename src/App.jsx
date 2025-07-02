@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from './component/Navbar';
+import Hero from './component/Hero';
 import About from './component/About';
 import Contact from './component/Contact';
 import Footer from './component/Footer';
-import Hero from './component/hero';
 import PortfolioShowcase from './component/PortfolioShowcase';
 
 const App = () => {

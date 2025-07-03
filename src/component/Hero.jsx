@@ -20,22 +20,22 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between min-h-[calc(100vh-4rem)] px-4 sm:px-6 lg:px-20 lg:mt-10">
-      <div className="max-w-xl z-10 mt-[50%] sm:mt-[30%] lg:mt-0 w-full" data-aos="fade-right">
-        <div className="relative w-full sm:w-48 h-10 bg-gradient-to-r from-[#656565] to-[#e99b63] shadow-[0_0_15px_rgba(255,255,255,0.4)] rounded-full mb-8">
-          <div className="absolute inset-[3px] bg-black rounded-full flex items-center justify-center gap-1 text-white text-sm sm:text-base">
+    <div className="flex flex-col lg:flex-row items-center justify-between min-h-[calc(100vh-4rem)] px-4 sm:px-6 lg:px-8 xl:px-20 py-8 sm:py-12 lg:py-16">
+      <div className="max-w-xl z-10 w-full mt-16 sm:mt-24 lg:mt-0" data-aos="fade-right">
+        <div className="relative w-full sm:w-48 h-8 sm:h-10 bg-gradient-to-r from-[#656565] to-[#e99b63] shadow-[0_0_15px_rgba(255,255,255,0.4)] rounded-full mb-6 sm:mb-8">
+          <div className="absolute inset-[3px] bg-[#1a1a1a] rounded-full flex items-center justify-center gap-1 text-white text-xs sm:text-sm">
             <IoDiamondOutline />
             INTRODUCING
           </div>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wider my-6 sm:my-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold tracking-wider my-4 sm:my-6 lg:my-8 text-white">
           Welcome to my Portfolio
         </h1>
 
-        <div className="flex gap-4 mt-8 sm:mt-12">
+        <div className="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8 lg:mt-12">
           <button
-            className="border border-[#2a2a2a] py-2 sm:py-3 px-4 sm:px-5 rounded-full text-sm sm:text-lg font-semibold tracking-wider transition-all duration-300 hover:bg-[#1a1a1a] flex items-center gap-2"
+            className="border border-[#2a2a2a] py-2 sm:py-2.5 px-4 sm:px-5 rounded-full text-xs sm:text-sm lg:text-lg font-semibold tracking-wider transition-all duration-300 hover:bg-[#1a1a1a] hover:text-white flex items-center gap-2 text-white"
             onClick={() => scrollToSection('about')}
             data-aos="fade-up"
             data-aos-delay="100"
@@ -43,7 +43,7 @@ const Hero = () => {
             About <FaExternalLinkAlt />
           </button>
           <button
-            className="border border-[#2a2a2a] py-2 sm:py-3 px-6 sm:px-8 rounded-full text-sm sm:text-lg font-semibold tracking-wider transition-all duration-300 hover:bg-[#1a1a1a] bg-gray-300 text-black hover:text-white flex items-center gap-2"
+            className="border border-[#2a2a2a] py-2 sm:py-2.5 px-5 sm:px-6 lg:px-8 rounded-full text-xs sm:text-sm lg:text-lg font-semibold tracking-wider transition-all duration-300 hover:bg-[#1a1a1a] bg-gray-300 text-black hover:text-white flex items-center gap-2"
             onClick={() => scrollToSection('contact')}
             data-aos="fade-up"
             data-aos-delay="200"
@@ -53,14 +53,14 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="w-full lg:w-1/2 h-[50vh] sm:h-[60vh] lg:h-[80vh] relative" data-aos="fade-left">
+      <div className="w-full lg:w-1/2 h-[40vh] sm:h-[50vh] lg:h-[70vh] relative mt-8 lg:mt-0" data-aos="fade-left">
         {splineError ? (
-          <div className="flex items-center justify-center h-full text-red-500">
+          <div className="flex items-center justify-center h-full text-red-500 text-sm sm:text-base">
             Failed to load Spline scene: {splineError}
           </div>
         ) : (
           <Spline
-            className="absolute top-[-10%] sm:top-[-15%] lg:top-0 left-0 sm:left-[-2%] lg:left-0 w-full h-full"
+            className="absolute top-[-5%] sm:top-[-10%] lg:top-0 left-0 w-full h-full scale-90 sm:scale-100"
             scene="https://prod.spline.design/IjLp7TFje3flQOaK/scene.splinecode"
             onError={(error) => setSplineError(error.message)}
           />

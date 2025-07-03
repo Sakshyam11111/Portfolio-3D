@@ -15,12 +15,12 @@ const Footer = () => {
 
     return (
         <footer
-            className="text-gray-300 py-12 px-4 sm:px-6 lg:px-8"
+            className="text-gray-300 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 xl:px-20 bg-[#1a1a1a]"
             aria-labelledby="footer-heading"
         >
             <div className="max-w-7xl mx-auto">
                 <h2 id="footer-heading" className="sr-only">Footer</h2>
-                <div className="flex flex-col sm:flex-row justify-between gap-8">
+                <div className="flex flex-col sm:flex-row justify-between gap-6 sm:gap-8">
                     {/* Contact Information */}
                     <div
                         className="flex-1"
@@ -30,39 +30,35 @@ const Footer = () => {
                     >
                         <h3
                             id="contact-heading"
-                            className="text-lg sm:text-xl font-semibold mb-4"
+                            className="text-base sm:text-lg lg:text-xl font-semibold mb-3 sm:mb-4 text-[#e99b63]"
                         >
                             Contact
                         </h3>
-                        <p className="text-base sm:text-lg">
+                        <p className="text-sm sm:text-base">
                             Email:{' '}
                             <a
-                                href="mailto:your.email@example.com"
-                                className="text-blue-400 hover:underline"
-                                aria-label="Email"
+                                href="mailto:sakshyamshrestha111@gmail.com"
+                                className="text-[#e99b63] hover:underline focus:outline-none focus:ring-2 focus:ring-[#e99b63] rounded"
+                                aria-label="Email Sakshyam Shrestha"
                             >
                                 sakshyamshrestha111@gmail.com
                             </a>
                         </p>
-                        <p className="text-base sm:text-lg mt-2">
+                        <p className="text-sm sm:text-base mt-2">
                             Phone:{' '}
                             <a
-                                href="tel:+1234567890"
-                                className="text-blue-400 hover:underline"
+                                href="tel:+9779808002930"
+                                className="text-[#e99b63] hover:underline focus:outline-none focus:ring-2 focus:ring-[#e99b63] rounded"
                                 aria-label="Phone number"
                             >
                                 +977-9808002930
                             </a>
                         </p>
-                        <p className="text-base sm:text-lg mt-2">
+                        <p className="text-sm sm:text-base mt-2">
                             Location:{' '}
-                            <a
-                                href="Gokarneshwor, Kathmandu, Nepal"
-                                className="text-blue-400 hover:underline"
-                                aria-label="Phone number"
-                            >
+                            <span className="text-[#e99b63]">
                                 Gokarneshwor, Kathmandu, Nepal
-                            </a>
+                            </span>
                         </p>
                     </div>
 
@@ -75,37 +71,37 @@ const Footer = () => {
                     >
                         <h3
                             id="social-heading"
-                            className="text-lg sm:text-xl font-semibold mb-4"
+                            className="text-base sm:text-lg lg:text-xl font-semibold mb-3 sm:mb-4 text-[#e99b63]"
                         >
                             Follow Me
                         </h3>
-                        <div className="flex gap-4">
+                        <div className="flex gap-3 sm:gap-4">
                             <a
                                 href="https://www.linkedin.com/in/anam-limbu-94673136b"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-300 hover:text-blue-400 transition-colors"
+                                className="text-gray-300 hover:text-[#e99b63] transition-colors focus:outline-none focus:ring-2 focus:ring-[#e99b63] rounded"
                                 aria-label="LinkedIn profile"
                             >
-                                <FaLinkedin className="text-3xl" />
+                                <FaLinkedin className="text-2xl sm:text-3xl" />
                             </a>
                             <a
                                 href="https://www.instagram.com/s.a.k.s.h.y.a.m/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-300 hover:text-blue-400 transition-colors"
+                                className="text-gray-300 hover:text-[#e99b63] transition-colors focus:outline-none focus:ring-2 focus:ring-[#e99b63] rounded"
                                 aria-label="Instagram profile"
                             >
-                                <FaInstagram className="text-3xl" />
+                                <FaInstagram className="text-2xl sm:text-3xl" />
                             </a>
                             <a
                                 href="https://github.com/Sakshyam11111"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-300 hover:text-blue-400 transition-colors"
-                                aria-label="Instagram profile"
+                                className="text-gray-300 hover:text-[#e99b63] transition-colors focus:outline-none focus:ring-2 focus:ring-[#e99b63] rounded"
+                                aria-label="GitHub profile"
                             >
-                                <FaGithub className="text-3xl" />
+                                <FaGithub className="text-2xl sm:text-3xl" />
                             </a>
                         </div>
                     </div>
@@ -119,28 +115,28 @@ const Footer = () => {
                     >
                         <h3
                             id="nav-heading"
-                            className="text-lg sm:text-xl font-semibold mb-4"
+                            className="text-base sm:text-lg lg:text-xl font-semibold mb-3 sm:mb-4 text-[#e99b63]"
                         >
                             Quick Links
                         </h3>
                         <nav className="flex flex-col gap-2">
                             <a
                                 href="#about"
-                                className="text-base sm:text-lg text-blue-400 hover:underline"
+                                className="text-sm sm:text-base text-[#e99b63] hover:underline focus:outline-none focus:ring-2 focus:ring-[#e99b63] rounded"
                                 aria-label="About section"
                             >
                                 About
                             </a>
                             <a
                                 href="#projects"
-                                className="text-base sm:text-lg text-blue-400 hover:underline"
+                                className="text-sm sm:text-base text-[#e99b63] hover:underline focus:outline-none focus:ring-2 focus:ring-[#e99b63] rounded"
                                 aria-label="Projects section"
                             >
                                 Projects
                             </a>
                             <a
                                 href="#contact"
-                                className="text-base sm:text-lg text-blue-400 hover:underline"
+                                className="text-sm sm:text-base text-[#e99b63] hover:underline focus:outline-none focus:ring-2 focus:ring-[#e99b63] rounded"
                                 aria-label="Contact section"
                             >
                                 Contact
@@ -151,11 +147,11 @@ const Footer = () => {
 
                 {/* Copyright Notice */}
                 <div
-                    className="mt-8 pt-8 border-t border-gray-700 text-center"
+                    className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-700 text-center"
                     data-aos="fade-up"
                     data-aos-delay="400"
                 >
-                    <p className="text-sm sm:text-base">
+                    <p className="text-xs sm:text-sm">
                         © {new Date().getFullYear()} Sakshyam Shrestha. All rights reserved.
                     </p>
                 </div>

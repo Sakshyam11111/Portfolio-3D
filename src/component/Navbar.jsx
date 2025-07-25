@@ -30,8 +30,7 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', href: '#hero', ariaLabel: 'Home section' },
         { name: 'About', href: '#about', ariaLabel: 'About section' },
-        { name: 'Skills', href: '#skills', ariaLabel: 'Skills section' },
-        { name: 'Education', href: '#education', ariaLabel: 'Education section' },
+        { name: 'Showcase', href: '#skillsPortfolioShowcase', ariaLabel: 'Showcase section' },
         { name: 'Contact', href: '#contact', ariaLabel: 'Contact section' },
     ];
 

@@ -34,8 +34,10 @@ const About = () => {
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4 sm:mb-6 text-[#e99b63]">Sakshyam Shrestha</h1>
             <p className="text-lg sm:text-xl mb-3 sm:mb-4 text-[#e99b63]">Fresher in Frontend Development</p>
             <p className="text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 text-gray-300">
-              As an innovative IT graduate, I am passionate about creating intuitive and engaging user experiences. With a solid foundation in HTML, CSS, and JavaScript, alongside expertise in React, I am prepared to tackle complex web projects. My proficiency with modern development tools such as Git, GitHub, and GitLab, combined with my skills in cutting-edge frameworks like Tailwind, enables me to deliver high-quality, responsive designs. I am excited to contribute to your team's success by leveraging my skills to produce standout digital solutions in today’s competitive landscape.
-            </p>
+              Passionate front-end developer with 30+ personal React/Tailwind projects and real-world internship experience.
+              Skilled in building responsive UIs, managing state with Zustand/Context API, and integrating REST APIs.
+              Currently exploring Three.js to craft interactive, immersive 3D experiences.
+              Actively looking for a junior front-end role or internship to grow, learn, and contribute to meaningful products.            </p>
             <div className="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center lg:justify-start">
               <a
                 href="https://www.linkedin.com/in/sakshyam-shrestha-8670112a3/"

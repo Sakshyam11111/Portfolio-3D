@@ -100,7 +100,10 @@ const PortfolioShowcase = () => {
     }, [isDragging]);
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] text-white relative px-4 sm:px-6 lg:px-8 xl:px-20 py-12 overflow-x-hidden">
+        <div
+            id="skillsPortfolioShowcase" // Added ID for scrolling
+            className="min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] text-white relative px-4 sm:px-6 lg:px-8 xl:px-20 py-12 overflow-x-hidden"
+        >
             <style jsx>{`
                 .custom-scrollbar::-webkit-scrollbar {
                     height: 8px;
@@ -300,7 +303,7 @@ const PortfolioShowcase = () => {
                 )}
                 {activeSection === 'education' && (
                     <div className="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg text-center" data-aos="fade-up">
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 text-[#e99b63]">My Education</h2>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 text-[#e99b63]">Education</h2>
                         <p className="text-gray-300 text-sm sm:text-base">Bachelor's in Information Technology - Texas College of Management and IT</p>
                         <p className="text-gray-300 text-sm sm:text-base mt-4">Higher School ( +2 ) Science - Arunima Higher Secondary School</p>
                         <p className="text-gray-300 text-sm sm:text-base mt-4">Junior School - Nava Arunima Secondary School</p>

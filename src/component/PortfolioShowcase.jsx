@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaGraduationCap as GraduationCap } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Image1 from "../assets/Realtimechat.png";
@@ -8,6 +8,9 @@ import Image3 from "../assets/Chatbot.jpeg";
 import Image4 from "../assets/Bankportal.jpeg";
 import Image5 from "../assets/Coffeeshop.png";
 import Image6 from "../assets/threeanimation.png";
+import Image7 from "../assets/campus.png";
+import Image8 from "../assets/Redefine.png";
+import Image9 from "../assets/ExpenseTracker.png";
 
 const PortfolioShowcase = () => {
     const scrollRef = useRef(null);
@@ -59,7 +62,7 @@ const PortfolioShowcase = () => {
         if (isDragging && scrollRef.current && !isScrolling && activeSection === 'projects') {
             e.preventDefault();
             const x = e.pageX - scrollRef.current.offsetLeft;
-            const walk = (x - startX) * 1.5;
+            const walk = (x - startX) * 1.2;
             scrollRef.current.scrollLeft = scrollLeft - walk;
         }
     };
@@ -80,7 +83,7 @@ const PortfolioShowcase = () => {
         if (isDragging && scrollRef.current && !isScrolling && activeSection === 'projects') {
             e.preventDefault();
             const x = e.touches[0].pageX - scrollRef.current.offsetLeft;
-            const walk = (x - startX) * 1.5;
+            const walk = (x - startX) * 1.2;
             scrollRef.current.scrollLeft = scrollLeft - walk;
         }
     };
@@ -101,7 +104,7 @@ const PortfolioShowcase = () => {
 
     return (
         <div
-            id="skillsPortfolioShowcase" // Added ID for scrolling
+            id="skillsPortfolioShowcase"
             className="min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] text-white relative px-4 sm:px-6 lg:px-8 xl:px-20 py-12 overflow-x-hidden"
         >
             <style jsx>{`
@@ -119,17 +122,14 @@ const PortfolioShowcase = () => {
                 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
                     background: #333333;
                 }
-                /* Firefox */
                 .custom-scrollbar {
                     scrollbar-color: #000000 #1a1a1a;
                     scrollbar-width: thin;
                 }
             `}</style>
 
-            {/* Neon Circle Background */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] lg:w-[400px] h-[200px] sm:h-[300px] lg:h-[400px] bg-[#e99b63] rounded-full opacity-20 blur-xl"></div>
 
-            {/* Header */}
             <div className="relative z-10 text-center mb-8 sm:mb-12" data-aos="fade-down">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-[#e99b63] tracking-wider">
                     Portfolio Showcase
@@ -139,12 +139,13 @@ const PortfolioShowcase = () => {
                 </p>
             </div>
 
-            {/* Navigation Buttons */}
             <div className="relative z-10 flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12" data-aos="fade-up">
                 {['projects', 'education', 'skills', 'certificate'].map((section) => (
                     <button
                         key={section}
                         onClick={() => setActiveSection(section)}
+                        role="tab"
+                        aria-selected={activeSection === section}
                         className={`px-4 sm:px-6 py-2 rounded-full font-semibold text-sm sm:text-base transition-all flex items-center gap-2 ${activeSection === section ? 'bg-[#e99b63] text-white hover:bg-white hover:text-black' : 'bg-gray-800 text-white hover:bg-white hover:text-black'}`}
                     >
                         {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -152,7 +153,6 @@ const PortfolioShowcase = () => {
                 ))}
             </div>
 
-            {/* Content Section */}
             <div className="relative z-10 max-w-7xl mx-auto">
                 {activeSection === 'projects' && (
                     <>
@@ -176,18 +176,18 @@ const PortfolioShowcase = () => {
                         >
                             {[
                                 {
+                                    img: Image7,
+                                    title: 'Texas Campus',
+                                    tech: 'React, Tailwind, Firebase',
+                                    alt: 'Texas Campus',
+                                    githubLink: 'https://github.com/Sakshyam11111/campus.git',
+                                },
+                                {
                                     img: Image1,
                                     title: 'Realtime Chat App',
                                     tech: 'MERN Stack, Socket.io, TailwindCSS, Daisy UI, JWT, Zustand',
                                     alt: 'Realtime Chat App',
                                     githubLink: 'https://github.com/Sakshyam11111/Real-Time-Chat.git',
-                                },
-                                {
-                                    img: Image2,
-                                    title: '3D Image Carousel',
-                                    tech: 'HTML, CSS',
-                                    alt: '3D Image Carousel',
-                                    githubLink: 'https://github.com/Sakshyam11111/Slider-3D.git',
                                 },
                                 {
                                     img: Image3,
@@ -204,11 +204,11 @@ const PortfolioShowcase = () => {
                                     githubLink: 'https://github.com/Sakshyam11111/CAS-Fontend.git',
                                 },
                                 {
-                                    img: Image5,
-                                    title: 'Coffee Shop',
-                                    tech: 'HTML, CSS, JavaScript',
-                                    alt: 'Coffee Shop',
-                                    githubLink: 'https://github.com/Sakshyam11111/Coffee-Shop.git',
+                                    img: Image9,
+                                    title: 'Expense Tracker',
+                                    tech: 'React, Tailwind',
+                                    alt: 'Expense Tracker',
+                                    githubLink: 'https://github.com/Sakshyam11111/Expense_Tracker.git',
                                 },
                                 {
                                     img: Image6,
@@ -216,6 +216,27 @@ const PortfolioShowcase = () => {
                                     tech: 'Three.js, React Three Fiber, Drei\'s useScroll, GSAP, Tailwind CSS',
                                     alt: '3RF Scroll Animation',
                                     githubLink: 'https://github.com/Sakshyam11111/R3F-Scroll-Animations.git',
+                                },
+                                {
+                                    img: Image8,
+                                    title: 'Redefine',
+                                    tech: 'React, Tailwind',
+                                    alt: 'Redefine',
+                                    githubLink: 'https://github.com/Sakshyam11111/Redefine.git',
+                                },
+                                {
+                                    img: Image5,
+                                    title: 'Coffee Shop',
+                                    tech: 'HTML, CSS, JavaScript',
+                                    alt: 'Coffee Shop',
+                                    githubLink: 'https://github.com/Sakshyam11111/Coffee-Shop.git',
+                                },
+                                {
+                                    img: Image2,
+                                    title: '3D Image Carousel',
+                                    tech: 'HTML, CSS',
+                                    alt: '3D Image Carousel',
+                                    githubLink: 'https://github.com/Sakshyam11111/Slider-3D.git',
                                 },
                             ].map((project, index) => (
                                 <div
@@ -257,15 +278,7 @@ const PortfolioShowcase = () => {
                 {activeSection === 'skills' && (
                     <div id="skills" className="relative max-w-7xl mx-auto">
                         <div
-                            ref={scrollRef}
                             className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-12 pb-4"
-                            onMouseDown={handleMouseDown}
-                            onMouseMove={handleMouseMove}
-                            onMouseUp={handleMouseUp}
-                            onMouseLeave={handleMouseUp}
-                            onTouchStart={handleTouchStart}
-                            onTouchMove={handleTouchMove}
-                            onTouchEnd={handleTouchEnd}
                         >
                             {[
                                 {
@@ -302,11 +315,51 @@ const PortfolioShowcase = () => {
                     </div>
                 )}
                 {activeSection === 'education' && (
-                    <div className="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg text-center" data-aos="fade-up">
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 text-[#e99b63]">Education</h2>
-                        <p className="text-gray-300 text-sm sm:text-base">Bachelor's in Information Technology - Texas College of Management and IT</p>
-                        <p className="text-gray-300 text-sm sm:text-base mt-4">Higher School ( +2 ) Science - Arunima Higher Secondary School</p>
-                        <p className="text-gray-300 text-sm sm:text-base mt-4">Junior School - Nava Arunima Secondary School</p>
+                    <div className="max-w-4xl mx-auto">
+                        <div className="space-y-6">
+                            {[
+                                {
+                                    degree: "Bachelor's in Information Technology",
+                                    institution: "Texas College of Management and IT",
+                                    description: "Specialized in software development, database management, and web technologies."
+                                },
+                                {
+                                    degree: "Higher School (+2) Science",
+                                    institution: "Arunima Higher Secondary School",
+                                    description: "Focused on mathematics, physics, and computer science fundamentals."
+                                },
+                                {
+                                    degree: "Junior School",
+                                    institution: "Nava Arunima Secondary School",
+                                    description: "Built a strong foundation in academics and developed early interest in technology."
+                                }
+                            ].map((edu, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 hover:border-orange-500/50 transition-all duration-500"
+                                >
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <GraduationCap className="w-6 h-6 text-white" />
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-xl font-bold text-orange-400 mb-1">
+                                                {edu.degree}
+                                            </h3>
+                                            <p className="text-gray-300 font-medium mb-1">
+                                                {edu.institution}
+                                            </p>
+                                            <p className="text-gray-400 text-sm mb-3">
+                                                {edu.period}
+                                            </p>
+                                            <p className="text-gray-300 text-sm">
+                                                {edu.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 )}
                 {activeSection === 'certificate' && (

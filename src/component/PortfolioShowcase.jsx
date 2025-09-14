@@ -11,6 +11,7 @@ import Image6 from "../assets/threeanimation.png";
 import Image7 from "../assets/campus.png";
 import Image8 from "../assets/Redefine.png";
 import Image9 from "../assets/ExpenseTracker.png";
+import Image10 from "../assets/tour.png";
 
 const PortfolioShowcase = () => {
     const scrollRef = useRef(null);
@@ -190,6 +191,13 @@ const PortfolioShowcase = () => {
                                     githubLink: 'https://github.com/Sakshyam11111/Real-Time-Chat.git',
                                 },
                                 {
+                                    img: Image10,
+                                    title: 'Online Tour Booking',
+                                    tech: 'React, Tailwind',
+                                    alt: 'TourExplorer',
+                                    githubLink: 'https://github.com/Sakshyam11111/Onlinetourbooking.git',
+                                },
+                                {
                                     img: Image3,
                                     title: 'Fully Responsive AI Chatbot',
                                     tech: 'React, Tailwind UI, API Integration',
@@ -297,8 +305,6 @@ const PortfolioShowcase = () => {
                                 <div
                                     key={index}
                                     className="bg-gray-900 p-4 sm:p-6 rounded-3xl shadow-lg flex flex-col items-center text-center w-full sm:min-w-[280px] lg:min-w-[400px]"
-                                    data-aos="fade-up"
-                                    data-aos-delay={index * 200}
                                 >
                                     <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mt-4 text-[#e99b63]">{skill.title}</h3>
                                     <ul className="text-gray-400 text-sm sm:text-base mt-2 space-y-2 text-left">
@@ -309,7 +315,7 @@ const PortfolioShowcase = () => {
                                 </div>
                             ))}
                         </div>
-                        <p className="text-center text-gray-400 text-sm sm:text-base mt-6" data-aos="fade-up" data-aos-delay="600">
+                        <p className="text-center text-gray-400 text-sm sm:text-base mt-6">
                             This just wraps up my first project as a front-end developer. Fingers crossed that everyone enjoys what I've put together. It's been a journey of learning and coding, and I'm hopeful it brings value.
                         </p>
                     </div>
@@ -364,18 +370,16 @@ const PortfolioShowcase = () => {
                 )}
                 {activeSection === 'certificate' && (
                     <div className="bg-gray-900 max-w-5xl mx-auto p-4 sm:p-6 rounded-3xl shadow-lg text-center">
-                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 text-[#e99b63]" data-aos="fade-down">Certificates</h2>
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-6 text-[#e99b63]">Certificates</h2>
                         <div className="flex justify-center">
-                            <div className="bg-gray-900 p-4 sm:p-6 rounded-3xl flex flex-col items-center text-center w-full sm:min-w-[280px] lg:min-w-[400px]" data-aos="fade-up">
+                            <div className="bg-gray-900 p-4 sm:p-6 rounded-3xl flex flex-col items-center text-center w-full sm:min-w-[280px] lg:min-w-[400px]">
                                 <div className="text-gray-300 text-sm sm:text-base space-y-4">
                                     <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold">Software Engineer Intern</h3>
-                                    <p>CAS Total Solutions, Kathmandu, Nepal</p>
+                                    <p className='font-semibold'>CAS Total Solutions, Kathmandu, Nepal</p>
                                     <ul className="list-disc text-left mx-auto max-w-md">
-                                        <li>Developed full-stack banking projects, enhancing functionality and user experience.</li>
-                                        <li>Learned and implemented React and a full-stack low-code framework to manage complex projects and backend functionalities.</li>
-                                        <li>Collaborated with cross-functional teams to improve performance, security, and usability.</li>
-                                        <li>Gained experience in API development, database management, and deployment as well.</li>
-                                    </ul>
+                                        <li>Developed full-stack banking projects using React and a low-code backend framework.</li>
+                                        <li>Collaborated with cross-functional teams to improve performance, security, and usability</li>
+                                        <li>Gained hands-on experience with APIs, deployment workflows, and database management</li>                                    </ul>
                                 </div>
                             </div>
                         </div>

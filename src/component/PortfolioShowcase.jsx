@@ -185,9 +185,9 @@ const PortfolioShowcase = () => {
                                 },
                                 {
                                     img: Image1,
-                                    title: 'Realtime Chat App',
+                                    title: 'Social Media Platform',
                                     tech: 'MERN Stack, Socket.io, TailwindCSS, Daisy UI, JWT, Zustand',
-                                    alt: 'Realtime Chat App',
+                                    alt: 'Social Media Platform',
                                     githubLink: 'https://github.com/Sakshyam11111/Real-Time-Chat.git',
                                 },
                                 {

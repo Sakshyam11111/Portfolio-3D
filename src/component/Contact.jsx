@@ -72,7 +72,7 @@ const Contact = () => {
             <div className="space-y-3 sm:space-y-4">
               <div className="flex items-center gap-3 sm:gap-4 p-3 rounded-lg hover:bg-gray-800/50 transition-colors">
                 <FaMapMarkerAlt className="w-5 h-5 sm:w-6 sm:h-6 text-[#e99b63] flex-shrink-0" />
-                <p className="text-sm sm:text-base text-gray-300">
+                <p className="text-sm sm:text-base text-[#e99b63]">
                   Gokarneshwor, Kathmandu, Nepal
                 </p>
               </div>

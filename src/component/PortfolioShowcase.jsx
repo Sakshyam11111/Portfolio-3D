@@ -295,7 +295,7 @@ const PortfolioShowcase = () => {
                                 },
                                 {
                                     title: 'Back-end Development',
-                                    skills: ['Git - Intermediate', 'Node.js - Basic', 'Socket.io - Basic', 'Zustand - Basic'],
+                                    skills: ['Git - Intermediate','Github - Intermediate', 'Node.js - Basic','Next.js - Basic', 'Socket.io - Basic', 'Zustand - Basic'],
                                 },
                                 {
                                     title: 'UI / UX Development',
